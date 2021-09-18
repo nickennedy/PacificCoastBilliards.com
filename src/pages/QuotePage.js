@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button} from 'reactstrap'
 import { Spinner } from 'reactstrap';
-
+import {Link} from 'react-router-dom'
 class QuotePage extends React.Component  {
 
     state = {
@@ -29,12 +29,10 @@ class QuotePage extends React.Component  {
                     <h1>Here Is Your Free Quote!</h1>
                     <h1 id='total' >Total: ${this.props.state.total}</h1>
                 </div>
-
-                <Button id='book-now-btn'>Book Now</Button>
-
-                <h3>Or</h3>
-                <br/>
-                <h3>CALL 209 818-2286 </h3>
+                <h2>BOOK NOW!</h2>
+                <h3>CALL 209 818-2286</h3>
+                <br />
+                <Link to='/store/tables'><Button>Shop Tables</Button></Link>
             </div>
         )
     }
