@@ -1,6 +1,8 @@
 import React from 'react'
 import Routes from './config/routes'
+import Header from './components/Header'
 import NavBar from './components/NavBar'
+
 class App extends React.Component{
 	state = {}
 
@@ -12,6 +14,7 @@ class App extends React.Component{
             startingZipcode: '',
             endingZipcode:'',
             loading: false,
+            redirect: false,
         })
     }
 
@@ -29,13 +32,18 @@ class App extends React.Component{
     calculateQuote = () => {
         // zipcodeapi key = bAgi1RI9lHLN8dqiRbibsTageXfUYBLJphP2ivQN0uepytgv7tPCoAmtAfHk9lxi
         // js-UMZvad4M1hSNLLyhAnj5CVwfWYqV2LITnLeH8lITOAP7ZOhTD4FYli5ZmNZ4EJ3P
+
         this.setState({
+            redirect:true,
             loading: true
         })
+
+
         let sum = 0
         let mileage = 0
 
         const calculateInfo = () => {
+
             switch(this.state.size){
                         case '7 Foot':
                             sum = sum + 350
@@ -56,7 +64,7 @@ class App extends React.Component{
                         sum = sum + 60
                     }
 
-                    let milageFee = mileage * 3.33
+                    let milageFee = mileage * 2.25
                     sum = sum + milageFee
 
                     if(this.state.size === '9 Feet'){
@@ -112,6 +120,7 @@ class App extends React.Component{
 	render() {
         return(
             <>
+            <Header/>
             <NavBar />
             <Routes handleChange={this.handleChange}  state={this.state} calculateQuote={this.calculateQuote} calculateDistance={this.calculateDistance}/>
             </>

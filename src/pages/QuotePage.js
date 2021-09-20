@@ -1,7 +1,6 @@
 import React from 'react'
 import {Button} from 'reactstrap'
 import { Spinner } from 'reactstrap';
-import {Link} from 'react-router-dom'
 class QuotePage extends React.Component  {
 
     state = {
@@ -26,13 +25,14 @@ class QuotePage extends React.Component  {
             return(
             <div id='quote-container'>
                 <div id='quote'>
-                    <h1>Here Is Your Free Quote!</h1>
-                    <h1 id='total' >Total: ${this.props.state.total}</h1>
+                    <h1 className='quote-text' id='quote-title'>Here Is Your Free Quote!</h1>
+                    <h1 className='quote-text' id='total' >Total: ${this.props.state.total}</h1>
                 </div>
-                <h2>BOOK NOW!</h2>
-                <h3>CALL 209 818-2286</h3>
+                <h2 id='book-now' className='quote-text'>BOOK NOW!</h2>
+                <h3 id='call-number' className='quote-text'>CALL 209 818-2286</h3>"
+                <a href="tel:209-818-2286"><Button id="call-now-btn">Call Now</Button></a>
                 <br />
-                <Link to='/store/tables'><Button>Shop Tables</Button></Link>
+                {/* <Link to='/store/tables'><Button id='shop-tables-btn'>Shop Tables</Button></Link> */}
             </div>
         )
     }

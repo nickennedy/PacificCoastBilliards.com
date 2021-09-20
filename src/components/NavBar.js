@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem ,} from 'reactstrap';
 import eightBall from '../images/eight-ball.png'
+import PCB_Writing from '../images/PCB_Writing.png'
 
 const NavBar = (props) => {
         const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -8,7 +9,7 @@ const NavBar = (props) => {
 
         return (
             <section id='nav'>
-            <h2 id='nav-logo'>MoveThatPoolTable.com</h2>
+                <img id='nav-logo' src={PCB_Writing} alt="" />
                 <div id='nav-bar'>
                     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                         <DropdownToggle id="nav-btn">

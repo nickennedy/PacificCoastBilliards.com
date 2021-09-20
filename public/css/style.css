@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 *{
-    font-family: 'Varela', sans-serif;
+    font-family: 'Varela';
 }
-
+#root{
+    margin: 0;
+}
 #nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:rgb(10, 108, 3);;
+    background-color:rgb(11, 10, 10);;
     border-bottom: solid 0.25px black;
     height: 3em;
-}
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    opacity: 91%
+    }
 
 #nav-bar{
     display: flex;
@@ -22,17 +29,58 @@
 }
 
 #landingSection{
-    margin-top: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-image: url('https://images.unsplash.com/reserve/D9xlw7UxTBqQw5sLf8cJ_reef%20insp-72.jpg?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-position: fixed;
 }
 
 #landing-button{
-    margin-top: 15%;
+    margin: 22% 0% 8% 0%;
+    animation: expand;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text-shadow: -1px 1px 2px #000000,
+    1px 1px 2px #000000,
+    1px -1px 0 #000000,
+    -1px -1px 0 #000000;
+    animation: swell;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    height: 10vh;
+    width: 80vw !important;
+    font-size: 130%;
+    border: solid 1px black !important;
+    border-radius: 11px;
+
 }
 
+.landing-title{
+    font-family: 'Lobster';
+    padding: 2%;
+    font-size: 40px;
+    margin-top: -25%
+}
+
+#shop-tables-btn{
+    margin-top: 30%;
+    animation: expand;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear
+}
+.landing-options{
+    padding-top: 20vh
+}
 #nav-header{
     padding: 1%;
     margin: 0% 0% 0% 2%
@@ -42,18 +90,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 18%;
+    margin-top: 33%
 }
 
 .input{
     text-align: center;
-    margin: 10%;
+    margin: 10% 0% 20% 0%;
     background-color: rgb(203, 197, 197) !important;
     color: black !important;
+    height: 10vh;
+    width: 90vw !important;
 }
 
 .label{
-    font-size: large;
+    font-size: x-large;
+    margin: 5% 3% 10% 3% !important;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 2px #000000,
+                1px 1px 2px #000000,
+                1px -1px 0 #000000,
+                -1px -1px 0 #000000;
 }
 
 #quote-container{
@@ -61,8 +117,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15vh;
-    padding: 5%;
+    background-image: url('https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMHdhdGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    position:relative;
 }
 
 #quote{
@@ -70,23 +131,68 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10%;
+    padding: 5% 0% 5% 0%;
+    margin-top: 0%; 
+    color: white;
+    -webkit-text-stroke: 1px #000000;
+	text-shadow: -1px 1px 2px #000000,
+                1px 1px 2px #000000,
+                1px -1px 0 #000000,
+                -1px -1px 0 #000000;
+}
+
+#quote-title{
+    font-family: 'Lobster';
+    font-size:xx-large;
+    margin-top: 10%
+}
+#book-now{
+    font-size: x-large;
+    color: white;
+    -webkit-text-stroke: 1px #000000;
+	text-shadow: -1px 1px 2px #000000,
+                1px 1px 2px #000000,
+                1px -1px 0 #000000,
+                -1px -1px 0 #000000;
+    margin: 60% 3% 5% 3% 
+
+}
+#call-number{
+    font-size: x-large;
+    color: white;
+    -webkit-text-stroke: 1px #000000;
+	text-shadow: -1px 1px 2px #000000,
+                1px 1px 2px #000000,
+                1px -1px 0 #000000,
+                -1px -1px 0 #000000;
+    margin: 1%;
+}
+#call-now-btn{
+    animation: swell;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    height: 7vh;
+    width: 33vw !important;
+    text-shadow: -1px 1px 2px #000000,
+    1px 1px 2px #000000,
+    1px -1px 0 #000000,
+    -1px -1px 0 #000000;
+    border: solid 1px whitesmoke;
+    margin: 35% 0% 50% 0%;;
 }
 
 #total{
     font-size: xx-large;
-    margin-top: 20%;
-}
-
-#book-now-btn{
-    margin: 10%
+    margin: 11% 0% 0% 0%;
+    
 }
 
 #eight-ball{
-    width: 35px;
+    width: 33px;
     height: auto;
     animation: grow;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear
 }
@@ -94,7 +200,6 @@
 #nav-btn{
     background: white;
     padding: 0px;
-    margin-left: 7%;
     border-radius: 25px;
     border: none
 }
@@ -104,20 +209,87 @@
         transform: rotate(0deg);
         ;
         }
-
+    25%{
+        transform: rotate(10deg)
+    }
+    45%{
+        transform: rotate(-10deg)
+    }
     50% {
-        transform: scale(1.25);
+        transform: scale(1.2);
         }
-
+    55%{
+        transform: rotate(10deg)
+    }
+    75%{
+        transform: rotate(-10deg)
+    }
     100%{
         transform: rotate(0deg);
     }
 }
 
+#calc-quote-btn{
+    margin: 10% 5% 25% 5%;
+    height: auto;
+    width: 60vw;
+    font-size: large;
+    border: solid 1px white;
+    color: whitesmoke;
+    text-shadow: -1px 1px 2px #000000,
+                1px 1px 2px #000000,
+                1px -1px 0 #000000,
+                -1px -1px 0 #000000 !important;
+    padding: 5%;
+    animation: swell;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
 #nav-logo{
-    color: rgb(242, 242, 242);
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    margin-top: 2%;
+    height: 50%;
+    width: auto;
+    padding: 0;
+    margin-right: 37%;
+}
+@keyframes expand {
+    0% {
+        transform: rotate(0deg);
+        ;
+        }
+    25%{
+        transform: rotate(.05deg)
+    }
+    45%{
+        transform: rotate(-.05deg)
+    }
+    50% {
+        transform: scale(1.05);
+        }
+    55%{
+        transform: rotate(.05deg)
+    }
+    75%{
+        transform: rotate(-.05deg)
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes swell {
+    0% {
+        transform: rotate(0deg);
+        ;
+        }
+    50% {
+        transform: scale(1.06);
+        }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 .form-labels{
@@ -134,8 +306,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25vh
+    margin-top: 25vh;
+    background-image: url('https://images.unsplash.com/reserve/D9xlw7UxTBqQw5sLf8cJ_reef%20insp-72.jpg?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    margin-top: -50%
+
 }
 .loading-screen-text{
-    padding: 10%
+    padding: 10%;
+    font-family: 'Lobster';
+    font-size:xx-large
+}
+
+#header_pic{
+    width: 100%;
+    height: auto;
+}
+
+#form-container{
+    background-image: url('https://images.unsplash.com/photo-1414073875831-b47709631146?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJsYWNrJTIwYW5kJTIwd2hpdGUlMjB3YXRlciU1Q3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin-top: -19%;
+    padding: 10% 3% 10% 3%;
+}
+
+.input{
+    background-color: black !important;
+    color: whitesmoke !important;
+    margin-bottom: 30%;
 }
