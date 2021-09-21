@@ -23,7 +23,7 @@ class JobForm extends React.Component{
         }
         return(
             <div id="form-container">
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                     <FormGroup id='job-form'>
                         <Label className='label' for="tabel-size">What Size Is The Pool Table?</Label>
                         <Input value={this.props.state.size} className='input' type="select" name="select" id="size" onChange={this.props.handleChange} required >
@@ -53,7 +53,7 @@ class JobForm extends React.Component{
                         <Input className='input' value={this.props.state.endingZipcode} id="endingZipcode" type="text" placeholder="Enter Starting Zipcode" onChange={this.props.handleChange} minLength="5" maxLength="5" required></Input>
 
                         
-                        <Button type='button' onClick={this.handleSubmit} id='calc-quote-btn'>Calculate Quote Now!</Button>
+                        <Button type="submit"  id='calc-quote-btn'>Calculate Quote Now!</Button>
 
                     </FormGroup>
                 </Form>
