@@ -54,7 +54,7 @@ class JobForm extends React.Component{
                         <Input className='input' value={this.props.state.endingZipcode} id="endingZipcode" type="text" placeholder="Enter Starting Zipcode" onChange={this.props.handleChange} minLength="5" maxLength="5" required></Input>
 
                         
-                        <Button type="submit"  id='calc-quote-btn'>Calculate Quote Now!</Button>
+                        <Button type="submit" id='calc-quote-btn'>Calculate Quote Now!</Button>
 
                     </FormGroup>
                 </Form>

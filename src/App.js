@@ -111,13 +111,18 @@ class App extends React.Component{
         }
         calculateDistance()
         
-        const loaded = setTimeout(() => {
-            if(this.state.total !== 0 || NaN){
-                endLoading()
-            }else{
-                loaded()
-            }
-        }, 4400)
+        const checkTotal = () => {
+            if(this.setState.total !== 0 || NaN){
+                        setTimeout(() => {
+                            if(this.state.total !== 0 || NaN){
+                                endLoading()
+                            }
+                        }, 4000)
+                    }else{checkTotal()}
+        }
+        checkTotal()
+        
+        
         
     }
 
