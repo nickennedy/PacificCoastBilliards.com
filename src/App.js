@@ -15,6 +15,7 @@ class App extends React.Component{
             endingZipcode:'',
             loading: false,
             redirect: false,
+            total: 0,
         })
     }
 
@@ -34,8 +35,8 @@ class App extends React.Component{
         // js-UMZvad4M1hSNLLyhAnj5CVwfWYqV2LITnLeH8lITOAP7ZOhTD4FYli5ZmNZ4EJ3P
 
         this.setState({
+            loading: true,
             redirect:true,
-            loading: true
         })
 
 
@@ -110,9 +111,13 @@ class App extends React.Component{
         }
         calculateDistance()
         
-        setTimeout(() => {
-            endLoading()
-        }, 3333)
+        const loaded = setTimeout(() => {
+            if(this.state.total !== 0 || NaN){
+                endLoading()
+            }else{
+                loaded()
+            }
+        }, 4400)
         
     }
 

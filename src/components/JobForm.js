@@ -3,7 +3,8 @@ import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import { Redirect } from "react-router-dom"
 class JobForm extends React.Component{
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+        e.preventDefault();
         const zip1 = this.props.state.startingZipcode
         const zip2 = this.props.state.endingZipcode
         const isZip1Valid = /^[0-9]{5}(?:-[0-9]{4})?$/.test(zip1)
